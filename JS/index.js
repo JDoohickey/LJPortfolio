@@ -40,7 +40,7 @@
     projectCards.forEach(card => {
       card.addEventListener('click', function() {
         const pdfFile = this.getAttribute('data-pdf');
-        const pdfPath = `../Assets/${pdfFile}`;
+        const pdfPath = `Assets/${pdfFile}`;
 
         // Set modal title
         modalTitle.textContent = projectTitles[pdfFile] || 'Project Details';
