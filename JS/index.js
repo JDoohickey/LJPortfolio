@@ -1,4 +1,30 @@
-// Smooth Typewriter Effect
+// Mobile Menu Toggle
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('hamburger');
+
+    mobileMenuToggle.addEventListener('click', function() {
+      navbar.classList.toggle('show');
+      hamburger.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking a nav link
+    document.querySelectorAll('.navbar a').forEach(link => {
+      link.addEventListener('click', function() {
+        navbar.classList.remove('show');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    // Hide mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!navbar.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+        navbar.classList.remove('show');
+        hamburger.classList.remove('active');
+      }
+    });
+
+    // Smooth Typewriter Effect
     const text = "I'm an Industrial Engineering graduate (BSc Eng, 2024) with a passion for crafting smarter, data-driven systems. My expertise spans process optimization, AI-driven solutions, and data analytics, with a proven track record in logistics, telehealth, and automation projects. As a collaborative problem-solver, I leverage tools like Power BI, Python, and reinforcement learning to drive efficiency and impact. Recognized with awards like 1st Prize at the SAIIE and AFRETECH competitions, I'm dedicated to delivering innovative, real-world solutions.";
 
     let i = 0;
