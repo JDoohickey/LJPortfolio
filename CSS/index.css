@@ -1,4 +1,5 @@
-* {
+/* General Reset and Base Styles */
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -22,9 +23,15 @@
       padding: 1rem 2rem;
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 2rem;
       z-index: 1000;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .navbar.collapsed {
+      transform: translateY(-100%);
     }
 
     .navbar a {
@@ -38,6 +45,64 @@
     .navbar a:hover {
       color: #00b7ff;
       transform: translateY(-2px);
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-menu-toggle {
+      display: none;
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1001;
+      background: linear-gradient(45deg, #00b7ff, #ff6f61);
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 183, 255, 0.3);
+    }
+
+    .mobile-menu-toggle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 183, 255, 0.5);
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hamburger span {
+      width: 20px;
+      height: 2px;
+      background: white;
+      margin: 2px 0;
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      transition: all 0.3s ease;
     }
 
     /* Intro Section with Typewriter Effect */
@@ -336,7 +401,7 @@
 
     /* Contact Section */
     .contact {
-      padding: 4rem 2rem;
+      padding: 4rem 2rem 2rem;
       background: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 183, 255, 0.1));
     }
 
@@ -388,11 +453,70 @@
       box-shadow: 0 4px 15px rgba(0, 183, 255, 0.5);
     }
 
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #1e1e2f 0%, #2a2a4a 100%);
+      color: #d0d0d0;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #00b7ff, #ff6f61, transparent);
+    }
+
+    footer::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #00b7ff, transparent);
+      animation: shimmer 3s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
+      .mobile-menu-toggle {
+        display: block;
+      }
+
       .navbar {
         flex-direction: column;
+        padding: 1rem;
         gap: 1rem;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+      }
+
+      .navbar.show {
+        transform: translateY(0);
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      .intro {
+        padding-top: 1rem;
       }
 
       .intro h1 {
@@ -433,36 +557,3 @@
         margin: 5% auto;
       }
     }
-
- /* Footer */
-    footer {
-      background: linear-gradient(135deg, #1e1e2f 0%, #2a2a4a 100%);
-      color: #d0d0d0;
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    footer::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #00b7ff, #ff6f61, transparent);
-    }
-
-    footer::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #00b7ff, transparent);
-      animation: shimmer 3s infinite;
-    }
-
