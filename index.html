@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lebajoa Mphaloane | Portfolio</title>
+  <link rel="stylesheet" href="../CSS/index.css" />
+  <!-- Primary favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./Assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./Assets/favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico" type="./Assets/image/x-icon">
+
+  <!-- Apple and Android support -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./Assets/apple-touch-icon.png">
+  <link rel="manifest" href="./Assets/site.webmanifest">
+
+  <!-- Android Chrome icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="./Assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="./Assets/android-chrome-512x512.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+</head>
+ <header>
+    <nav class="navbar">
+      <a href="#intro">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+<body>
+  <body>
+  <header>
+    <nav class="navbar">
+      <a href="#intro">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="intro" class="intro">
+    <h1><span class="first-letter">L</span>ebajoa John Mphaloane</h1>
+    <div class="typewriter">
+      <div class="typewriter-text" id="typewriter-text">
+        <span class="cursor" id="cursor"></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+      <div class="project-card" data-pdf="traffic-optimization.pdf">
+        <img src="../Assets/RL.png" alt="Traffic Optimization" />
+        <h3>Urban Traffic Optimization</h3>
+        <p>Built a DQN-based traffic control system using SUMO to reduce city congestion. Final-year project.</p>
+      </div>
+      <div class="project-card" data-pdf="ai-route-optimization.pdf">
+        <img src="../Assets/route.png" alt="AI Logistics" />
+        <h3>AI Route Optimization</h3>
+        <p>AI logistics software for route optimization — cut fuel costs and emissions. 1st Prize, SAIIE Student Competition.</p>
+      </div>
+      <div class="project-card" data-pdf="biometric-payment.pdf">
+        <img src="../Assets/CampusNETPay.png" alt="Biometric Payment" />
+        <h3>Biometric Payment System</h3>
+        <p>Designed a secure biometric campus payment system to enable cashless, ID-based transactions.</p>
+      </div>
+      <div class="project-card" data-pdf="telehealth-kiosk.pdf">
+        <img src="../Assets/healthcare.png" alt="Telehealth Kiosk" />
+        <h3>Telehealth Kiosk System</h3>
+        <p>Developed a telehealth kiosk for rural consultation. Combines medical devices with intelligent software.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for PDF Display -->
+  <div id="pdfModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title">Project Details</h2>
+        <span class="close" id="closeModal">&times;</span>
+      </div>
+      <iframe id="pdfFrame" class="pdf-container" src="" type="application/pdf"></iframe>
+    </div>
+  </div>
+
+  <section id="experience" class="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Business Analyst</strong> – Lebon Consulting (Apr 2025 – Present): <p>Built Power BI dashboards, handled debit mandates, and contributed to policy sales.</p></li>
+      <li><strong>Process Engineer Intern</strong> – Lebon Consulting (Nov 2024 – Feb 2025): <p>Improved sales processes, built a Flask dashboard, standardized messaging workflows.</p></li>
+      <li><strong>Associate Consultant</strong> – Wits MIA (May 2022 – Nov 2022): <p>Conducted time studies, mapped processes, and optimized cleaning operations at public institutions.</p></li>
+    </ul>
+  </section>
+
+  <section id="education" class="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>BSc (Eng) Industrial Engineering</strong> – Wits University, 2024</li>
+      <li><strong>NSC with Distinctions</strong> – M J Mohlahli Comm Tech, 2018 (Top 100 Achiever, Free State)</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form" action="mailto:lj.socialmedia07@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Email</button>
+    </form>
+  </section>
+
+    <footer>
+        © 2025 Lebajoa Mphaloane. All rights reserved.
+    </footer>
+
+  <script src="../JS/index.js"></script>
+</body>
+</html>
