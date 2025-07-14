@@ -58,7 +58,6 @@
     const projectTitles = {
       'traffic-optimization.pdf': 'Urban Traffic Optimization',
       'ai-route-optimization.pdf': 'AI Route Optimization',
-      'biometric-payment.pdf': 'Biometric Payment System',
       'telehealth-kiosk.pdf': 'Telehealth Kiosk System'
     };
 
